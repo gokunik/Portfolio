@@ -23,7 +23,7 @@ const ContactContent = () => {
         For any queries, please feel free to reach out to me at:{" "}
         <a
           className="text-white link hover:text-gray-300 underline hover:underline"
-          href="mailto:J3a5c@example.com"
+          href="mailto:niteshkhatri2226@gmail.com"
           tabIndex={-1}
         >
           niteshkhatri2226@gmail.com
