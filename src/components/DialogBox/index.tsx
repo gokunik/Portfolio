@@ -1,7 +1,6 @@
 import { Dialog, Transition } from "@headlessui/react";
 import { DialogSize, DialogType } from "../../types";
 import { Fragment } from "react";
-import resume from "../../assets/resume/Nitesh_Khatri_Resume.pdf";
 
 export const DialogBox: React.FC<{
   isOpen: boolean;
@@ -74,18 +73,6 @@ export const DialogBox: React.FC<{
                   <p className="sm:w-40 w-32 border-[0.8px]"></p>
                 </div>
                 <div className="text-sm text-white">{content}</div>
-                <div className="mt-4 flex justify-center">
-                  <a
-                    className="text-white text-base link hover:text-gray-300 flex items-center gap-1.5"
-                    href={resume}
-                    target="_blank"
-                    download="Nitesh_Khatri_Resume.pdf"
-                    tabIndex={-1}
-                  >
-                    <p>Download</p>
-                    <i className="bi bi-file-earmark-arrow-down-fill text-sm"></i>
-                  </a>
-                </div>
               </Dialog.Panel>
             </Transition.Child>
           </div>
