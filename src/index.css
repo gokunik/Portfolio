@@ -1,0 +1,99 @@
+/*** Fonts ***/
+/* 1. Poppins */
+/* Usage:font-family: 'Poppins', sans-serif; */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/* 2. Merriweather Sans */
+/* Usage:font-family: 'Merriweather Sans', sans-serif;  */
+@import url("https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+
+/* 3. Glory */
+@import url("https://fonts.googleapis.com/css2?family=Glory:wght@400;500;600;700;800&display=swap");
+/* font-family: 'Glory', sans-serif; */
+
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300italic,600italic,300,600");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  --heading-font: "Merriweather Sans", sans-serif;
+  --primary-font: "Poppins", sans-serif;
+  --gradient: linear-gradient(90deg, purple, #ee6352);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#root {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  position: relative;
+  font-family: var(--primary-font);
+  width: 100%;
+  height: 100vh;
+  background-image: url("./assets/images/background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+body::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(98, 232, 244, 0.4),
+      rgba(163, 134, 240, 0.3)
+    ),
+    url("./assets/overlay.png");
+  filter: blur(10px);
+  opacity: 0.6;
+  z-index: -1;
+}
+
+a,
+img,
+button,
+span {
+  display: inline-block;
+}
+
+a {
+  color: rgba(0, 0, 0, 0.877);
+  display: inline-block;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+li {
+  list-style-type: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--heading-font);
+}

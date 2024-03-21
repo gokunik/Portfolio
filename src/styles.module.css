@@ -1,0 +1,47 @@
+.wrapper {
+  @apply w-full h-full flex flex-col justify-around p-2 md:p-12 text-white;
+}
+.container-box {
+  @apply flex flex-col items-center;
+}
+.logo {
+  @apply w-[100px] h-[100px] border rounded-[50%] hover:rounded-md transition-all border-solid border-[white] relative;
+}
+
+.logo img {
+  @apply w-full h-full object-cover rounded-[50%] hover:rounded-md transition-all hover:scale-125 z-30 relative;
+}
+
+.content {
+  @apply min-w-[300px] md:w-[700px] my-12 border-y border-white overflow-hidden flex justify-center items-center;
+}
+
+.logo::after {
+  @apply content-[""] absolute bottom-[-3rem] w-px h-12 bg-[white] z-[2] left-2/4;
+}
+
+.nav-bar {
+  position: relative;
+}
+
+.nav-bar::after {
+  @apply content-[""] absolute top-[-3rem] w-px h-12 bg-[white] z-[2] left-2/4;
+}
+
+.content .inner {
+  @apply flex flex-col items-center uppercase px-6 sm:px-8;
+}
+
+.inner h1 {
+  @apply text-[calc(1.35rem_+_1.5vw)] text-center mb-2;
+}
+.nav-list {
+  @apply flex md:flex-row flex-col;
+}
+.nav-item {
+  @apply w-[100px] cursor-pointer py-2 flex justify-center border md:border-y md:border-l md:border-r-0 border-white;
+}
+
+.footer a {
+  @apply text-2xl mt-20 md:mt-24 text-[white] transition-transform duration-[0.1s] ease-[ease-out] hover:scale-[1.125] hover:text-white hover:opacity-90;
+}
